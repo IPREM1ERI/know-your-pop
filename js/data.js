@@ -3,4 +3,12 @@ const categoryTwo = ["This triple crown winner had a hit movie in 2003 starring 
 const categoryThree = ["If you say his name before you shoot a crumpled piece of paper, your odds increase of it going in", "Name the team: Troy, Emmitt, Michale, Jimmy"]
 const categoryFour = ["Name the group: UGod, Inspecta Deck, GZA, Raekwon the Chef","This singer said 'Its ok to eat fish Cause they dont have any feelings'"]
 
-const answers = ['seabiscuit', 'achilles', 'weasel', 'keanureeves', 'wutang', 'wutangclan', 'kobe', 'cowboys', 'dallascowboys', 'kurtcobain']
+const answersArr = ['seabiscuit', 'achilles', 'weasel', 'keanureeves', 'wutang', 'wutangclan', 'kobe', 'cowboys', 'dallascowboys', 'kurtcobain']
+
+export {
+  categoryOne,
+  categoryTwo,
+  categoryThree,
+  categoryFour,
+  answersArr
+}
