@@ -24,18 +24,15 @@ section.board {
   grid-template-rows: repeat(2, 20vmin);
   grid-template-columns: repeat(2, 25vmin);
   grid-gap: 0vmin;
-  border: 4px green solid;
   justify-content: center;
 }
 
 div.board-space {
   border: 1px solid black;
   font-size: 8vmin;
-  text-align: center;
-  vertical-align: middle;
-}
+  justify-content: center;
 
-div #question-space {
+div > '#question-space' {
   border: 1px solid blue;
   width: 300px;
   height: 150px;

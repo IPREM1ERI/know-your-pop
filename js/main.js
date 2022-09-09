@@ -1,4 +1,5 @@
-import {categoryOne, categoryTwo, categoryThree, categoryFour, answersArr} from "../js/data.js"
+import {randomCatOneQuestion, randomCatTwoQuestion, randomCatThreeQuestion, randomCatFourQuestion, checkAnswer,categoryOne, categoryTwo, categoryThree, categoryFour} from "../js/data.js"
+
 /*---------------------------let variable----------------------------*/
 let board, score
 /*--------------------------cached elements--------------------------*/
@@ -8,14 +9,19 @@ const answerBox = document.querySelector("#answer-box")
 
 /*--------------------------event listeners--------------------------*/
 
-/*-----------------------------functions-----------------------------*/
 
+
+
+
+/*-----------------------------functions-----------------------------*/
+init()
 function init() {
-  board = [cat1,cat2,cat3,cat4]
-  score = 0000
+  board = [categoryOne,categoryTwo,categoryThree,categoryFour]
+  score = 0
   render()
 }
 
 function render() {
 
 }
+

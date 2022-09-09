@@ -5,10 +5,28 @@ const categoryFour = ["Name the group: UGod, Inspecta Deck, GZA, Raekwon the Che
 
 const answersArr = ['seabiscuit', 'achilles', 'weasel', 'keanureeves', 'wutang', 'wutangclan', 'kobe', 'cowboys', 'dallascowboys', 'kurtcobain']
 
+//when more questions are added update the 2 to the total new questions amount
+function randomCatOneQuestion (){
+  return categoryOne[Math.floor(Math.random() * 2)] 
+}
+
+function randomCatTwoQuestion (){
+  return categoryTwo[Math.floor(Math.random() * 2)] 
+}
+
+function randomCatThreeQuestion (){
+  return categoryThree[Math.floor(Math.random() * 2)] 
+}
+
+function randomCatFourQuestion (){
+  return categoryFour[Math.floor(Math.random() * 2)] 
+}
+
+function checkAnswer(userAnswer) {
+  userAnswer = userAnswer.toLowerCase().replace(/[^a-z]/gi, "")
+  return answersArr.icludes(userAnswer)
+}
+
 export {
-  categoryOne,
-  categoryTwo,
-  categoryThree,
-  categoryFour,
-  answersArr
+randomCatOneQuestion, randomCatTwoQuestion, randomCatThreeQuestion, randomCatFourQuestion, checkAnswer, categoryOne, categoryTwo, categoryThree, categoryFour
 }
