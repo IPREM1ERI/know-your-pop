@@ -7,19 +7,19 @@ const answersArr = ['seabiscuit', 'achilles', 'weasel', 'keanureeves', 'wutang',
 
 //when more questions are added update the 2 to the total new questions amount
 function randomCatOneQuestion (){
-  return categoryOne[Math.floor(Math.random() * 2)] 
+  return categoryOne[Math.floor(Math.random() * categoryOne.length)] 
 }
 
 function randomCatTwoQuestion (){
-  return categoryTwo[Math.floor(Math.random() * 2)] 
+  return categoryTwo[Math.floor(Math.random() * categoryTwo.length)] 
 }
 
 function randomCatThreeQuestion (){
-  return categoryThree[Math.floor(Math.random() * 2)] 
+  return categoryThree[Math.floor(Math.random() * categoryThree.length)] 
 }
 
 function randomCatFourQuestion (){
-  return categoryFour[Math.floor(Math.random() * 3)] 
+  return categoryFour[Math.floor(Math.random() * categoryFour.length)] 
 }
 
 function checkAnswer(userAnswer) {
