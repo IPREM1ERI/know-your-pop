@@ -22,6 +22,7 @@ body {
 }
 
 h1 {
+  border: 2px solid black;
   font-family: 'EB Garamond', serif;
   text-align: center;
   padding: 0px;
@@ -30,7 +31,7 @@ h1 {
 
 section.board {
   display: grid;
-  background-color: green;
+  border: 2px solid black;
   grid-template-rows: repeat(2, 20vmin);
   grid-template-columns: repeat(2, 25vmin);
   grid-gap: 0vmin;
@@ -38,7 +39,7 @@ section.board {
 }
 
 div.board-space {
-  border: 1.5px solid black;
+  border: 1.5px solid red;
   border-radius: 4px;
   font-family: 'EB Garamond', serif;
   font-size: 8vmin;
@@ -63,7 +64,7 @@ section.container {
   text-align: center;
   background-color: white;
   border-radius: 10px;
-  border: 1px solid red;
+  border: 2px solid red;
   word-wrap: normal;
   white-space: pre-wrap;
   word-break: break-word;
@@ -77,15 +78,14 @@ section.container {
   font-size: 48px;
   background-color: white;
   border-radius: 5px;
-  border: 1px solid red;
+  border: 2px solid red;
 }
 
 #answer-box {
   width: 500px;
   height: 100px;
   border-radius: 25px;
-  border: 2px solid #609;
-  
+  border: 2px solid red;
   font-family: 'Caveat', cursive;
   font-weight: bold;
   text-align: center;
@@ -93,6 +93,7 @@ section.container {
 }
 
 footer {
+  border: 2px solid black;
   display: flex;
   align-items: center;
   justify-content: space-between;

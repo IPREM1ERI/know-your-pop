@@ -1,4 +1,4 @@
-import {randomCatOneQuestion, randomCatTwoQuestion, randomCatThreeQuestion, randomCatFourQuestion, checkAnswer} from "../data/data.js"
+import {randomPop, randomMusic, randomSport, randomMovie, checkAnswer} from "../data/data.js"
 
 /*---------------------------let variable----------------------------*/
 let score
@@ -14,19 +14,15 @@ const questionsSpaceEl = document.getElementById("question-space")
 /*--------------------------event listeners--------------------------*/
 
 boardEl.addEventListener('click', handleClick)
+
 resetBtn.addEventListener('click',init)
+
 answerBox.addEventListener('keydown', function(evt) {
   if (evt.key !== undefined) {
     userInput = this.value
-    render(userInput)
+    renderResult(userInput)
   }
 })
-
-
-
-
-
-
 
 /*-----------------------------functions-----------------------------*/
 init()
@@ -43,23 +39,26 @@ function handleClick(evt) {
 
 function renderQuestion(idx) {
   if (idx === 0) {
-    questionsSpaceEl.textContent = randomCatOneQuestion()
+    questionsSpaceEl.textContent = randomPop()
   } else if (idx === 1) {
-    questionsSpaceEl.textContent = randomCatTwoQuestion()
+    questionsSpaceEl.textContent = randomMovie()
   } else if (idx === 2) {
-    questionsSpaceEl.textContent = randomCatThreeQuestion()
+    questionsSpaceEl.textContent = randomSport()
   } else {
-    questionsSpaceEl.textContent = randomCatFourQuestion()
+    questionsSpaceEl.textContent = randomMusic()
   }
 }
 
-function render(userInput) {
+
+
+function renderResult(userInput) {
   let answer = checkAnswer(userInput)
   if (answer) {
     score += 100
   } else {
     score -= 100
   }
+  console.log(score)
 }
 
 
