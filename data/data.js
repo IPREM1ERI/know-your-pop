@@ -22,10 +22,9 @@ function randomMusic (){
   return musicQuestions[Math.floor(Math.random() * musicQuestions.length)] 
 }
 
-function checkAnswer(userAnswer) {
-  userAnswer = userAnswer.toLowerCase().replace(/[^a-z]/gi, "")
-  console.log(userAnswer)
-  return answersArr.icludes(userAnswer)
+function checkAnswer(userInput) {
+  userInput = userInput.toLowerCase().replace(/[^a-z]/gi, "")
+  return answersArr.icludes(userInput)
 }
 
 export {

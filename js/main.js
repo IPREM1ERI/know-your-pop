@@ -6,23 +6,32 @@ let timeLeft = 60
 
 /*--------------------------cached elements--------------------------*/
 const boardEl = document.querySelector(".board")
+const questionsSpaceEl = document.getElementById("question-space")
 let userInput = document.getElementById("user-input")
 const resetBtn = document.getElementById("reset-button")
 const answerBox = document.getElementById("answer-box")
 let countdownEl = document.getElementById("countdown")
-const questionsSpaceEl = document.getElementById("question-space")
+const enterBtn = document.getElementById("submit-button")
+
 /*--------------------------event listeners--------------------------*/
 
 boardEl.addEventListener('click', handleClick)
 
 resetBtn.addEventListener('click',init)
 
-answerBox.addEventListener('keydown', function(evt) {
-  if (evt.key !== undefined) {
-    userInput = this.value
-    renderResult(userInput)
-  }
+enterBtn.addEventListener('click' , function(){
+  userInput = answerBox.value
+  console.log(userInput)
+  renderResult(userInput)
 })
+
+// answerBox.addEventListener('keydown', function(evt) {
+//   if (evt.key === 13) {
+//     userInput = this.value
+//     console.log(userInput)
+//     //renderResult(userInput)
+//   }
+// })
 
 /*-----------------------------functions-----------------------------*/
 init()
@@ -30,6 +39,7 @@ function init() {
   timeLeft = 60
   score = 0
   questionsSpaceEl.textContent = ""
+  answerBox.value = ""
 }
 
 function handleClick(evt) {
@@ -58,6 +68,7 @@ function renderResult(userInput) {
   } else {
     score -= 100
   }
+  
   console.log(score)
 }
 
