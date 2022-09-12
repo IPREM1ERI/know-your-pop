@@ -12,7 +12,7 @@ html {
 }
 
 body {
-  background-color: lightgray;
+  background-color: gray;
   margin: 0;
   height: 100vh;
   display: flex;
@@ -21,6 +21,7 @@ body {
 
 section.board {
   display: grid;
+  background-color: green;
   grid-template-rows: repeat(2, 20vmin);
   grid-template-columns: repeat(2, 25vmin);
   grid-gap: 0vmin;
@@ -30,16 +31,57 @@ section.board {
 div.board-space {
   border: 1px solid black;
   font-size: 8vmin;
+  font-size: 24px;
+  text-align: center;
+}
+
+section.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 50px;
+}
+#question-space {
+  width: 850px;
+  height: 150px;
+  margin: auto;
+  justify-content: center;
+  text-align: center;
+  background-color: white;
+  border: 1px solid red;
+}
+
+#answer-box {
+  width: 500px;
+  height: 100px;
+  margin: auto;
+  
+  justify-content: center;
+  text-align: center;
+  font-size: 48px;
+}
+
+
+
+#score-display {
+  width: 250px;
+  height: 50px;
+  margin: auto;
+  justify-content: center;
+  text-align: center;
+  font-size: 48px;
+  background-color: white;
+  border: 1px solid red;
+}
+
+button {
+  display: flex;
+  width: 100px;
   justify-content: center;
 
-div > '#question-space' {
-  border: 1px solid blue;
-  width: 300px;
-  height: 150px;
-  font-size: 8vmin;
-  text-align: center;
-  vertical-align: middle;
 }
+
+
 
 
 
