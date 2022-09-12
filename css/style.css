@@ -17,12 +17,13 @@ body {
   height: 100vh;
   display: flex;
   flex-direction: column;
+  justify-content: space-around;
 }
 
 h1 {
   font-family: 'EB Garamond', serif;
   text-align: center;
-  padding: 25px;
+  padding: 0px;
   margin: 0px;
 }
 
@@ -47,8 +48,8 @@ section.container {
   border: 2px solid black;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: space-between;
+  align-items: center;
   padding: 60px;
 }
 
@@ -80,19 +81,40 @@ section.container {
   height: 100px;
   font-family: 'Caveat', cursive;
   font-weight: bold;
-  justify-content: center;
   text-align: center;
   font-size: 48px;
 }
 
 footer {
   display: flex;
-  align-items: flex-end;
+  align-items: center;
+  justify-content: space-between;
 }
 
 button {
   width: 100px;
+  padding: 10px;
+  margin: 25px;
 }
+
+#countdown {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 48px;
+  color: #fff;
+  padding: 10px;
+  margin: 25px;
+  text-shadow: 
+    0 0 7px #fff,
+    0 0 10px #fff,
+    0 0 21px #fff,
+    0 0 42px rgb(255, 0, 0),
+    0 0 82px rgb(255, 0, 0),
+    0 0 92px rgb(255, 0, 0),
+    0 0 102px rgb(255, 0, 0),
+    0 0 151px rgb(255, 0, 0);
+}
+
+
 
 
 
