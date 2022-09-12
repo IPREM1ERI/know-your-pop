@@ -12,6 +12,7 @@ html {
 }
 
 body {
+  background-image:;
   background-color: gray;
   margin: 0;
   height: 100vh;
@@ -38,6 +39,7 @@ section.board {
 
 div.board-space {
   border: 1.5px solid black;
+  border-radius: 4px;
   font-family: 'EB Garamond', serif;
   font-size: 8vmin;
   font-size: 24px;
@@ -60,6 +62,7 @@ section.container {
   font-size: 38px;
   text-align: center;
   background-color: white;
+  border-radius: 10px;
   border: 1px solid red;
   word-wrap: normal;
   white-space: pre-wrap;
@@ -73,12 +76,16 @@ section.container {
   font-family: 'Orbitron', sans-serif;
   font-size: 48px;
   background-color: white;
+  border-radius: 5px;
   border: 1px solid red;
 }
 
 #answer-box {
   width: 500px;
   height: 100px;
+  border-radius: 25px;
+  border: 2px solid #609;
+  
   font-family: 'Caveat', cursive;
   font-weight: bold;
   text-align: center;
@@ -100,7 +107,7 @@ button {
 #countdown {
   font-family: 'Orbitron', sans-serif;
   font-size: 48px;
-  color: #fff;
+  color: white;
   padding: 10px;
   margin: 25px;
   text-shadow: 
