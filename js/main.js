@@ -18,9 +18,11 @@ resetBtn.addEventListener('click',init)
 answerBox.addEventListener('keydown', function(evt) {
   if (evt.key !== undefined) {
     userInput = this.value
-    console.log(userInput)
+    render(userInput)
   }
 })
+
+
 
 
 
@@ -50,6 +52,16 @@ function renderQuestion(idx) {
     questionsSpaceEl.textContent = randomCatFourQuestion()
   }
 }
+
+function render(userInput) {
+  let answer = checkAnswer(userInput)
+  if (answer) {
+    score += 100
+  } else {
+    score -= 100
+  }
+}
+
 
 let timer = setInterval(() =>{
   --timeLeft
