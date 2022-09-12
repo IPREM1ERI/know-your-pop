@@ -2,11 +2,13 @@ import {randomCatOneQuestion, randomCatTwoQuestion, randomCatThreeQuestion, rand
 
 /*---------------------------let variable----------------------------*/
 let board, score
-/*--------------------------cached elements--------------------------*/
-const userInput = document.querySelector("#user-input")
-const resetBtn = document.querySelector("#reset-button")
-const answerBox = document.querySelector("#answer-box")
+let timeLeft = 60
 
+/*--------------------------cached elements--------------------------*/
+const userInput = document.getElementById("user-input")
+const resetBtn = document.getElementById("reset-button")
+const answerBox = document.getElementById("answer-box")
+let countdownEl = document.getElementById("countdown")
 /*--------------------------event listeners--------------------------*/
 
 
@@ -24,4 +26,16 @@ function init() {
 function render() {
 
 }
+
+let timer = setInterval(() =>{
+  --timeLeft
+  if (timeLeft > 9) {
+    countdownEl.textContent = timeLeft
+  } else {
+    countdownEl.textContent = `0${timeLeft}`
+  }
+  if (timeLeft === 0) {
+  clearInterval(timer)
+  }
+}, 1000)
 
