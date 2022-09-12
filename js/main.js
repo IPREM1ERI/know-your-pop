@@ -39,6 +39,7 @@ init()
 function init() {
   timeLeft = 60
   score = 0
+  displayScore.textContent = score
   questionsSpaceEl.textContent = ""
   answerBox.value = ""
 }
@@ -47,6 +48,8 @@ function handleClick(evt) {
   const questionIdx = parseInt(evt.target.id[3])
   renderQuestion(questionIdx)
   answerBox.value = ""
+  let count = 0
+  startTimer(count)
 }
 
 function renderQuestion(idx) {
@@ -74,18 +77,21 @@ function renderResult(userInput) {
 }
 
 
-
-let timer = setInterval(() =>{
-  --timeLeft
-  if (timeLeft > 9) {
-    countdownEl.textContent = timeLeft
-  } else {
-    countdownEl.textContent = `0${timeLeft}`
+function startTimer(count) {
+  ++count
+  if (count === 1) {
+    let timer = setInterval(() =>{
+      --timeLeft
+      if (timeLeft > 9) {
+        countdownEl.textContent = timeLeft
+      } else {
+        countdownEl.textContent = `0${timeLeft}`
+      }
+      if (timeLeft === 0) {
+      clearInterval(timer)
+      }
+    }, 1000)
   }
-  if (timeLeft === 0) {
-  clearInterval(timer)
-  }
-}, 1000)
-
+}
 
 
