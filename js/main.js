@@ -1,7 +1,7 @@
 import {randomCatOneQuestion, randomCatTwoQuestion, randomCatThreeQuestion, randomCatFourQuestion, checkAnswer} from "../data/data.js"
 
 /*---------------------------let variable----------------------------*/
-let board, score
+let score
 let timeLeft = 60
 
 /*--------------------------cached elements--------------------------*/
@@ -14,26 +14,27 @@ const questionsSpaceEl = document.getElementById("question-space")
 /*--------------------------event listeners--------------------------*/
 
 boardEl.addEventListener('click', handleClick)
+resetBtn.addEventListener('click',init)
 
 
 
 /*-----------------------------functions-----------------------------*/
 init()
 function init() {
-  board = [categoryOne,categoryTwo,categoryThree,categoryFour]
+  //board = [categoryOne,categoryTwo,categoryThree,categoryFour]
+  timeLeft = 60
   score = 0
-  render()
+  questionsSpaceEl.textContent = ""
+ //
 }
 
 function handleClick(evt) {
   const questionIdx = parseInt(evt.target.id[3])
   console.log(questionIdx)
-  render(questionIdx)
-  
-
+  renderQuestion(questionIdx)
 }
 
-function render(idx) {
+function renderQuestion(idx) {
   if (idx === 0) {
     questionsSpaceEl.textContent = randomCatOneQuestion()
   } else if (idx === 1) {
