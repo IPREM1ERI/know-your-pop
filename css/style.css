@@ -19,6 +19,13 @@ body {
   flex-direction: column;
 }
 
+h1 {
+  font-family: 'EB Garamond', serif;
+  text-align: center;
+  padding: 25px;
+  margin: 0px;
+}
+
 section.board {
   display: grid;
   background-color: green;
@@ -29,24 +36,41 @@ section.board {
 }
 
 div.board-space {
-  border: 1px solid black;
+  border: 1.5px solid black;
+  font-family: 'EB Garamond', serif;
   font-size: 8vmin;
   font-size: 24px;
   text-align: center;
 }
 
 section.container {
+  border: 2px solid black;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
-  padding: 50px;
+  align-items: center;
+  justify-content: space-between;
+  padding: 60px;
 }
+
 #question-space {
   width: 850px;
   height: 150px;
-  margin: auto;
-  justify-content: center;
+  font-family: 'EB Garamond', serif;
+  font-size: 38px;
   text-align: center;
+  background-color: white;
+  border: 1px solid red;
+  word-wrap: normal;
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+#score-display {
+  width: 250px;
+  height: 50px;
+  text-align: center;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 48px;
   background-color: white;
   border: 1px solid red;
 }
@@ -54,7 +78,6 @@ section.container {
 #answer-box {
   width: 500px;
   height: 100px;
-  margin: auto;
   font-family: 'Caveat', cursive;
   font-weight: bold;
   justify-content: center;
@@ -64,24 +87,11 @@ section.container {
 
 
 
-#score-display {
-  width: 250px;
-  height: 50px;
-  margin: auto;
-  justify-content: center;
-  text-align: center;
-  font-family: 'Orbitron', sans-serif;
-  font-size: 48px;
-  background-color: white;
-  border: 1px solid red;
-}
-
 button {
-  display: flex;
   width: 100px;
-  justify-content: center;
-
 }
+
+
 
 
 
