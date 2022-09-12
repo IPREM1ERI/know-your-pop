@@ -12,6 +12,8 @@ const resetBtn = document.getElementById("reset-button")
 const answerBox = document.getElementById("answer-box")
 let countdownEl = document.getElementById("countdown")
 const enterBtn = document.getElementById("submit-button")
+let displayScore = document.getElementById("score-display")
+
 
 /*--------------------------event listeners--------------------------*/
 
@@ -21,7 +23,6 @@ resetBtn.addEventListener('click',init)
 
 enterBtn.addEventListener('click' , function(){
   userInput = answerBox.value
-  console.log(userInput)
   renderResult(userInput)
 })
 
@@ -45,6 +46,7 @@ function init() {
 function handleClick(evt) {
   const questionIdx = parseInt(evt.target.id[3])
   renderQuestion(questionIdx)
+  answerBox.value = ""
 }
 
 function renderQuestion(idx) {
@@ -68,9 +70,9 @@ function renderResult(userInput) {
   } else {
     score -= 100
   }
-  
-  console.log(score)
+  displayScore.textContent = score
 }
+
 
 
 let timer = setInterval(() =>{
