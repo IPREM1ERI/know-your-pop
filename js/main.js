@@ -6,7 +6,7 @@ let timeLeft = 60
 
 /*--------------------------cached elements--------------------------*/
 const boardEl = document.querySelector(".board")
-const userInput = document.getElementById("user-input")
+let userInput = document.getElementById("user-input")
 const resetBtn = document.getElementById("reset-button")
 const answerBox = document.getElementById("answer-box")
 let countdownEl = document.getElementById("countdown")
@@ -15,22 +15,27 @@ const questionsSpaceEl = document.getElementById("question-space")
 
 boardEl.addEventListener('click', handleClick)
 resetBtn.addEventListener('click',init)
+answerBox.addEventListener('keydown', function(evt) {
+  if (evt.key !== undefined) {
+    userInput = this.value
+    console.log(userInput)
+  }
+})
+
+
 
 
 
 /*-----------------------------functions-----------------------------*/
 init()
 function init() {
-  //board = [categoryOne,categoryTwo,categoryThree,categoryFour]
   timeLeft = 60
   score = 0
   questionsSpaceEl.textContent = ""
- //
 }
 
 function handleClick(evt) {
   const questionIdx = parseInt(evt.target.id[3])
-  console.log(questionIdx)
   renderQuestion(questionIdx)
 }
 
