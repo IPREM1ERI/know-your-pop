@@ -38,7 +38,7 @@ div.board-space {
 section.container {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: space-around;
   padding: 50px;
 }
 #question-space {
@@ -55,7 +55,8 @@ section.container {
   width: 500px;
   height: 100px;
   margin: auto;
-  
+  font-family: 'Caveat', cursive;
+  font-weight: bold;
   justify-content: center;
   text-align: center;
   font-size: 48px;
@@ -69,6 +70,7 @@ section.container {
   margin: auto;
   justify-content: center;
   text-align: center;
+  font-family: 'Orbitron', sans-serif;
   font-size: 48px;
   background-color: white;
   border: 1px solid red;
