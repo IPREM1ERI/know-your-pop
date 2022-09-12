@@ -28,5 +28,9 @@ function checkAnswer(userAnswer) {
 }
 
 export {
-randomCatOneQuestion, randomCatTwoQuestion, randomCatThreeQuestion, randomCatFourQuestion, checkAnswer, categoryOne, categoryTwo, categoryThree, categoryFour
+  randomCatOneQuestion, 
+  randomCatTwoQuestion, 
+  randomCatThreeQuestion, 
+  randomCatFourQuestion, 
+  checkAnswer, 
 }

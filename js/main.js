@@ -1,4 +1,4 @@
-import {randomCatOneQuestion, randomCatTwoQuestion, randomCatThreeQuestion, randomCatFourQuestion, checkAnswer,categoryOne, categoryTwo, categoryThree, categoryFour} from "../data/data.js"
+import {randomCatOneQuestion, randomCatTwoQuestion, randomCatThreeQuestion, randomCatFourQuestion, checkAnswer} from "../data/data.js"
 
 /*---------------------------let variable----------------------------*/
 let board, score
