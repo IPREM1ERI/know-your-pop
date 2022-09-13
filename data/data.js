@@ -6,7 +6,10 @@ const musicQuestions = ["Name the group: UGod, Inspecta Deck, GZA, Raekwon the C
 
 const answersArr = ['seabiscuit', 'achilles', 'weasel', 'keanureeves', 'wutang', 'wutangclan', 'kobe', 'cowboys', 'dallascowboys', 'kurtcobain', "icecube","fightclub"]
 
-//when more questions are added update the 2 to the total new questions amount
+const wrongMeme = []
+
+
+
 function randomPop (){
   return popQuestions[Math.floor(Math.random() * popQuestions.length)] 
 }
