@@ -2,6 +2,7 @@ import {randomPop, randomMusic, randomSport, randomMovie, checkAnswer} from "../
 
 /*---------------------------let variable----------------------------*/
 let score
+let count
 let timeLeft = 60
 
 /*--------------------------cached elements--------------------------*/
@@ -26,20 +27,14 @@ enterBtn.addEventListener('click' , function(){
   renderResult(userInput)
 })
 
-// answerBox.addEventListener('keydown', function(evt) {
-//   if (evt.key === 13) {
-//     userInput = this.value
-//     console.log(userInput)
-//     //renderResult(userInput)
-//   }
-// })
-
 /*-----------------------------functions-----------------------------*/
 init()
 function init() {
   timeLeft = 60
   score = 0
+  count = 0
   displayScore.textContent = score
+  countdownEl.textContent = timeLeft
   questionsSpaceEl.textContent = ""
   answerBox.value = ""
 }
@@ -48,8 +43,10 @@ function handleClick(evt) {
   const questionIdx = parseInt(evt.target.id[3])
   renderQuestion(questionIdx)
   answerBox.value = ""
-  let count = 0
-  startTimer(count)
+  if (count === 0) {
+    ++count
+    startTimer(count)
+  }
 }
 
 function renderQuestion(idx) {
@@ -78,7 +75,6 @@ function renderResult(userInput) {
 
 
 function startTimer(count) {
-  ++count
   if (count === 1) {
     let timer = setInterval(() =>{
       --timeLeft
