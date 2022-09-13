@@ -12,8 +12,8 @@ html {
 }
 
 body {
-  background-image:;
-  background-color: gray;
+  background: url(https://i.ibb.co/qrpCGGn/background.gif);
+  background-size: cover;
   margin: 0;
   height: 100vh;
   display: flex;
@@ -45,6 +45,24 @@ div.board-space {
   font-size: 8vmin;
   font-size: 24px;
   text-align: center;
+}
+
+#cat0 {
+  background-image: url(https://i.ibb.co/J50wRqC/pop.gif);
+  background-size: cover;
+}
+#cat1 {
+  background-image: url(https://i.ibb.co/Q9ZXs5n/movies.gif);
+  background-size: contain;
+}
+#cat2 {
+  background-image: url(https://i.ibb.co/vhYzvG4/sports.gif);
+  background-size: contain;
+  
+}
+#cat3{
+  background-image: url(https://i.ibb.co/5h9jMGQ/musicgif.gif);
+  background-size: cover;
 }
 
 section.container {
