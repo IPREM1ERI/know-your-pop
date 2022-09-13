@@ -37,12 +37,14 @@ function init() {
   countdownEl.textContent = timeLeft
   questionsSpaceEl.textContent = ""
   answerBox.value = ""
+  
 }
 
 function handleClick(evt) {
   const questionIdx = parseInt(evt.target.id[3])
   renderQuestion(questionIdx)
   answerBox.value = ""
+  
   if (count === 0) {
     ++count
     startTimer(count)
