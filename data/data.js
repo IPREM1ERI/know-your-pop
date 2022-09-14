@@ -1,4 +1,4 @@
-const popQuestions = ["They say this member of the Mustelids goes POP", "I wonder if this greek hero heard a POP when his got torn" ]
+const popQuestions = ["They say this member of the Mustelids goes POP", "I wonder if this Greek hero heard a POP when his got torn" ]
 const movieQuestions = ["This triple crown winner had a hit movie in 2003 starring Tobey Maguire", "Name the actor: Speed, Point Break, The Devils Advocate, Bill and Ted's Execellent Adventure", "Name the film: 'Martha's polishing the brass on the Titanic.It's all going down man.' - Tyler Durden"
 ]
 const sportQuestion = ["If you say his name before you shoot a crumpled piece of paper, your odds increase of it going in", "Name the team: Troy, Emmitt, Michale, Jimmy"]

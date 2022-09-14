@@ -4,6 +4,7 @@ import {randomPop, randomMusic, randomSport, randomMovie, checkAnswer, randomWro
 let score
 let count
 let timeLeft = 60
+let timerItervalId
 
 /*--------------------------cached elements--------------------------*/
 const boardEl = document.querySelector(".board")
@@ -41,6 +42,9 @@ function init() {
   answerBox.value = ""
   wrongMeme.src = defaultImg
   correctMeme.src = defaultImg
+  if (timerItervalId) {
+    clearInterval(timerItervalId)
+  }
 }
 
 function handleClick(evt) {
@@ -85,7 +89,7 @@ function renderResult(userInput) {
 
 function startTimer(count) {
   if (count === 1) {
-    let timer = setInterval(() =>{
+    timerItervalId = setInterval(() =>{
       --timeLeft
       if (timeLeft > 9) {
         countdownEl.textContent = timeLeft
@@ -98,5 +102,8 @@ function startTimer(count) {
     }, 1000)
   }
 }
+
+
+
 
 
