@@ -3,7 +3,6 @@ import {randomPop, randomMusic, randomSport, randomMovie, checkAnswer, randomWro
 let score
 let count
 let timeLeft = 60
-let timerItervalId
 /*--------------------------cached elements--------------------------*/
 const boardEl = document.querySelector(".board")
 const questionsSpaceEl = document.getElementById("question-space")
@@ -15,7 +14,8 @@ const enterBtn = document.getElementById("submit-button")
 let displayScore = document.getElementById("score-display")
 const wrongMeme = document.getElementById("wrong")
 const correctMeme = document.getElementById("correct")
-//const gameAudio = new Audio("./assets/gamemusic.m4a")
+const gameAudio = new Audio("./assets/gamemusic.m4a")
+const musicLoop = document.getElementById("game-audio")
 /*--------------------------event listeners--------------------------*/
 boardEl.addEventListener('click', handleClick)
 
@@ -26,14 +26,16 @@ enterBtn.addEventListener('click' , function(){
   renderResult(userInput)
 })
 
-window.onload = function() {
-  document.getElementById("game-audio").play()
-}
+boardEl.addEventListener('click', function() {
+  gameAudio.volume = .10
+  gameAudio.play()
+})
 
+gameAudio.addEventListener('ended', () => {
+  gameAudio.play()
+})
 /*-----------------------------functions-----------------------------*/
 init()
-
-
 
 function init() {
   timeLeft = 60
@@ -85,7 +87,6 @@ function renderResult(userInput) {
 
 function startTimer(count) {
   if (count === 1) {
-    
     let timer = setInterval(() =>{
       --timeLeft
       if (timeLeft > 9) {
@@ -100,9 +101,7 @@ function startTimer(count) {
   }
 }
 
-function palyAudio() {
 
-}
 
 
 
