@@ -15,6 +15,7 @@ const enterBtn = document.getElementById("submit-button")
 let displayScore = document.getElementById("score-display")
 const wrongMeme = document.getElementById("wrong")
 const correctMeme = document.getElementById("correct")
+//const gameAudio = new Audio("./assets/gamemusic.m4a")
 /*--------------------------event listeners--------------------------*/
 boardEl.addEventListener('click', handleClick)
 
@@ -25,8 +26,14 @@ enterBtn.addEventListener('click' , function(){
   renderResult(userInput)
 })
 
+window.onload = function() {
+  document.getElementById("game-audio").play()
+}
+
 /*-----------------------------functions-----------------------------*/
 init()
+
+
 
 function init() {
   timeLeft = 60
@@ -78,6 +85,7 @@ function renderResult(userInput) {
 
 function startTimer(count) {
   if (count === 1) {
+    
     let timer = setInterval(() =>{
       --timeLeft
       if (timeLeft > 9) {
@@ -90,6 +98,10 @@ function startTimer(count) {
       }
     }, 1000)
   }
+}
+
+function palyAudio() {
+
 }
 
 

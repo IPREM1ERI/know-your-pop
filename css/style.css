@@ -66,21 +66,38 @@ div.board-space:hover {
 
 
 div.board-space {
+  border: 3px solid black;
   border-radius: 10px;
   font-family: 'EB Garamond', serif;
+}
+
+#wrong {
+  animation: flicker 2.5s infinite alternate;
+}
+
+#correct {
+  animation: flicker 2.1s infinite alternate;
 }
 
 #wrong,
 #correct {
   border-radius: 10px;
-  box-shadow:  
-  0 0 40px 10px #fff,
-  0 0 80px 40px #f0f, 
-  0 0 120px 70px #0ff;
   width: 300px;
   height: 300px;
   margin: 0 200px;
 }
+
+@keyframes flicker  {
+  0%, 18%, 22%, 25%, 53%, 57%, 100% {
+    box-shadow:  
+    0 0 40px 10px #fff,
+    0 0 80px 40px #f0f, 
+    0 0 120px 70px #0ff;
+    }
+    20%,24%,55% {
+      box-shadow: none;
+    }
+  }
 
 #cat0 {
   background-image: url(https://i.ibb.co/J50wRqC/pop.gif);
