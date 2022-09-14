@@ -24,6 +24,7 @@ enterBtn.addEventListener('click' , function(){
   userInput = answerBox.value
   renderResult(userInput)
 })
+
 /*-----------------------------functions-----------------------------*/
 init()
 
