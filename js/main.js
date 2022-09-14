@@ -1,11 +1,9 @@
 import {randomPop, randomMusic, randomSport, randomMovie, checkAnswer, randomWrongMeme, randomCorrectMeme, defaultImg} from "../data/data.js"
-
 /*---------------------------let variable----------------------------*/
 let score
 let count
 let timeLeft = 60
 let timerItervalId
-
 /*--------------------------cached elements--------------------------*/
 const boardEl = document.querySelector(".board")
 const questionsSpaceEl = document.getElementById("question-space")
@@ -17,10 +15,7 @@ const enterBtn = document.getElementById("submit-button")
 let displayScore = document.getElementById("score-display")
 const wrongMeme = document.getElementById("wrong")
 const correctMeme = document.getElementById("correct")
-
-
 /*--------------------------event listeners--------------------------*/
-
 boardEl.addEventListener('click', handleClick)
 
 resetBtn.addEventListener('click',init)
@@ -29,9 +24,9 @@ enterBtn.addEventListener('click' , function(){
   userInput = answerBox.value
   renderResult(userInput)
 })
-
 /*-----------------------------functions-----------------------------*/
 init()
+
 function init() {
   timeLeft = 60
   score = 0
@@ -42,9 +37,6 @@ function init() {
   answerBox.value = ""
   wrongMeme.src = defaultImg
   correctMeme.src = defaultImg
-  if (timerItervalId) {
-    clearInterval(timerItervalId)
-  }
 }
 
 function handleClick(evt) {
@@ -70,8 +62,6 @@ function renderQuestion(idx) {
   }
 }
 
-
-
 function renderResult(userInput) {
   let answer = checkAnswer(userInput)
   if (answer) {
@@ -86,10 +76,9 @@ function renderResult(userInput) {
   displayScore.textContent = score
 }
 
-
 function startTimer(count) {
   if (count === 1) {
-    timerItervalId = setInterval(() =>{
+    let timer = setInterval(() =>{
       --timeLeft
       if (timeLeft > 9) {
         countdownEl.textContent = timeLeft
