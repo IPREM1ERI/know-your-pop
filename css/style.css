@@ -23,7 +23,7 @@ body {
 
 h1 {
   font-family: 'EB Garamond', serif;
-  font-size: 60px;
+  font-size: 65px;
   text-align: center;
   padding: 0px;
   margin: 50px;
@@ -64,17 +64,17 @@ div.board-space {
 }
 
 #wrong {
-  width: 200px;
-  height: 200px;
+  width: 300px;
+  height: 300px;
   margin: 0 200px;
-  background-color:white;
+  
 }
 
 #correct {
-  width: 200px;
-  height: 200px;
+  width: 300px;
+  height: 300px;
   margin: 0 200px;
-  background-color: white;
+  
 }
 
 #cat0 {
@@ -210,7 +210,7 @@ button {
 
 #countdown {
   font-family: 'Orbitron', sans-serif;
-  font-size: 60px;
+  font-size: 100px;
   color: white;
   padding: 10px;
   text-shadow: 

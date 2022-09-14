@@ -1,4 +1,4 @@
-import {randomPop, randomMusic, randomSport, randomMovie, checkAnswer} from "../data/data.js"
+import {randomPop, randomMusic, randomSport, randomMovie, checkAnswer, randomWrongMeme, randomCorrectMeme, defaultImg} from "../data/data.js"
 
 /*---------------------------let variable----------------------------*/
 let score
@@ -14,6 +14,8 @@ const answerBox = document.getElementById("answer-box")
 let countdownEl = document.getElementById("countdown")
 const enterBtn = document.getElementById("submit-button")
 let displayScore = document.getElementById("score-display")
+const wrongMeme = document.getElementById("wrong")
+const correctMeme = document.getElementById("correct")
 
 
 /*--------------------------event listeners--------------------------*/
@@ -37,7 +39,8 @@ function init() {
   countdownEl.textContent = timeLeft
   questionsSpaceEl.textContent = ""
   answerBox.value = ""
-  
+  wrongMeme.src = defaultImg
+  correctMeme.src = defaultImg
 }
 
 function handleClick(evt) {
@@ -69,8 +72,12 @@ function renderResult(userInput) {
   let answer = checkAnswer(userInput)
   if (answer) {
     score += 100
+    wrongMeme.src = defaultImg
+    correctMeme.src = randomCorrectMeme()
   } else {
     score -= 100
+    correctMeme.src = defaultImg
+    wrongMeme.src = randomWrongMeme()
   }
   displayScore.textContent = score
 }

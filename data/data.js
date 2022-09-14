@@ -6,9 +6,18 @@ const musicQuestions = ["Name the group: UGod, Inspecta Deck, GZA, Raekwon the C
 
 const answersArr = ['seabiscuit', 'achilles', 'weasel', 'keanureeves', 'wutang', 'wutangclan', 'kobe', 'cowboys', 'dallascowboys', 'kurtcobain', "icecube","fightclub"]
 
-const wrongMeme = []
+const wrongMemes = new Array("../assets/Wrong/Wrong2.jpg","../assets/Wrong/Wrong3.jpg","../assets/Wrong/Wrong4.jpg")
+const correctMemes = new Array("../assets/Correct/Correct1.jpg")
 
+const defaultImg = "../assets/glitch-smile.gif"
 
+function randomWrongMeme() {
+  return wrongMemes[Math.floor(Math.random() * wrongMemes.length)]
+}
+
+function randomCorrectMeme() {
+  return correctMemes[Math.floor(Math.random() * correctMemes.length)]
+}
 
 function randomPop (){
   return popQuestions[Math.floor(Math.random() * popQuestions.length)] 
@@ -36,5 +45,8 @@ export {
   randomMovie, 
   randomSport, 
   randomMusic, 
-  checkAnswer
+  checkAnswer,
+  randomWrongMeme,
+  randomCorrectMeme,
+  defaultImg
 }
