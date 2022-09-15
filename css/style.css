@@ -248,6 +248,16 @@ footer {
   width: 100px;
   padding: 10px;
   margin: 5px;
+  box-shadow: 
+  0 0 2px #fff,
+  0 0 6px #fff,
+  0 0 7px #fff,
+  0 0 2px rgb(0, 17, 255),
+  0 0 8px rgb(0, 17, 255),
+  0 0 15px rgb(0, 17, 255),
+  0 0 24px rgb(0, 17, 255),
+  0 0 31px rgb(0, 17, 255);
+
 }
 
 #reset-button {
