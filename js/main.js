@@ -15,7 +15,6 @@ let displayScore = document.getElementById("score-display")
 const wrongMeme = document.getElementById("wrong")
 const correctMeme = document.getElementById("correct")
 const gameAudio = new Audio("./assets/gamemusic.m4a")
-//const musicLoop = document.getElementById("game-audio")
 /*--------------------------event listeners--------------------------*/
 boardEl.addEventListener('click', handleClick)
 
@@ -34,8 +33,6 @@ boardEl.addEventListener('click', function() {
 gameAudio.addEventListener('ended', () => {
   gameAudio.play()
 })
-
-
 /*-----------------------------functions-----------------------------*/
 init()
 
