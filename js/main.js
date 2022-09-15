@@ -15,7 +15,7 @@ let displayScore = document.getElementById("score-display")
 const wrongMeme = document.getElementById("wrong")
 const correctMeme = document.getElementById("correct")
 const gameAudio = new Audio("./assets/gamemusic.m4a")
-const musicLoop = document.getElementById("game-audio")
+//const musicLoop = document.getElementById("game-audio")
 /*--------------------------event listeners--------------------------*/
 boardEl.addEventListener('click', handleClick)
 
@@ -50,6 +50,7 @@ function init() {
 }
 
 function handleClick(evt) {
+  if (timeLeft === 0) return
   const questionIdx = parseInt(evt.target.id[3])
   renderQuestion(questionIdx)
   answerBox.value = ""
