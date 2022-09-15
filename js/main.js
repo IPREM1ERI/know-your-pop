@@ -34,6 +34,8 @@ boardEl.addEventListener('click', function() {
 gameAudio.addEventListener('ended', () => {
   gameAudio.play()
 })
+
+
 /*-----------------------------functions-----------------------------*/
 init()
 

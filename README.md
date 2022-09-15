@@ -1,19 +1,23 @@
-# Know Your POP
+# **Know Your POP**
 ![GAME!!](./assets/Game_pic_readme.PNG)
 
-Know Your Pop is a quiz game that test your knowledge on pop culture. The goal is simple, answer as many questions correct in a minute to increase your score, but be careful, entering the wrong spelling or wrong answer will decrease your score.
+Know Your Pop is a quiz game that test your knowledge on pop culture. The goal is simple, answer as many questions correct in a minute to increase your score, but be careful, entering the wrong spelling or wrong answer will decrease your score. If you finish with a negative score, put down that book and turn the TV on, otherwise congrats, I can converse with you.
 
-
-**Technologies used**
-##
-1. CSS
-2. JavaScript
-3. HTML
-4. git
+[PLAY THE GAME HERE](https://know-your-pop.netlify.app)
 
 
 
 
-**Ice Box**
+## **Technologies used**
 
-1. Add a high score list for user to input have a l
+- CSS
+- JavaScript
+- HTML
+- git
+
+
+
+
+## **Ice Box**
+
+- Add a high score list for user to input have a l
