@@ -110,7 +110,8 @@ function startTimer(count) {
         countdownEl.textContent = `0${timeLeft}`
       }
       if (timeLeft === 0) {
-      clearInterval(timer)
+        score > 0 ? questionsSpaceEl.textContent = `Your score is ${score} we can be friends` : questionsSpaceEl.textContent = `Your score is ${score} stop touching grass`
+        clearInterval(timer)
       }
     }, 1000)
   }
