@@ -20,4 +20,6 @@ Know Your Pop is a quiz game that test your knowledge on pop culture. The goal i
 
 ## **Ice Box**
 
-- Add a high score list for user to input have a l
+- Add a high score list
+- Hide the enter button
+- Add enter key functionality
