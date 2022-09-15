@@ -18,4 +18,4 @@ Know Your POP is a quiz game that test your knowledge on pop culture. The goal i
 - Hide the enter button
 - Add enter key functionality
 - Fix the CCS layout to render properly on different sized screens
-- Refactor the question and asnwer arrays to an object containing key value pairs
+- Refactor the question and answer arrays to an object containing key value pairs
