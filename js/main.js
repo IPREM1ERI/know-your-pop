@@ -77,13 +77,24 @@ function renderResult(userInput) {
   let answer = checkAnswer(userInput)
   if (answer) {
     score += 100
+    if (score > 0)  {
+      displayScore.style.color = "green"
+    } else {
+      displayScore.style.color = "black"
+    }
     wrongMeme.src = defaultImg
     correctMeme.src = randomCorrectMeme()
   } else {
     score -= 100
+    if (score < 0) {
+      displayScore.style.color = "red"
+    } else {
+      displayScore.style.color = "black"
+    }
     correctMeme.src = defaultImg
     wrongMeme.src = randomWrongMeme()
   }
+  
   displayScore.textContent = score
 }
 
