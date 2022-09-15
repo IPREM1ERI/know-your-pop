@@ -6,9 +6,9 @@ const musicQuestions = ["Name the group: UGod, Inspecta Deck, GZA, Raekwon the C
 
 const answerArrs = ['seabiscuit', 'achilles', 'weasel', 'keanureeves', 'wutang', 'wutangclan', 'kobe', 'cowboys', 'dallascowboys', 'kurtcobain', "icecube","fightclub","houseoftherisingsun", "pringles", "electoralcollege","joydivision","yankees","newyorkyankees", "breakdancing","quentintarantino","albundy","jayz","smoothcriminal","outkast","daftpunk","kendricklamar","jasontodd","jackierobinson"]
 
-const wrongMemes = new Array("../assets/Wrong/Wrong2.jpg","../assets/Wrong/Wrong3.jpg","../assets/Wrong/Wrong4.jpg")
+const wrongMemes = new Array("../assets/Wrong/Wrong1.jpg","../assets/Wrong/Wrong2.jpg","../assets/Wrong/Wrong3.jpg","../assets/Wrong/Wrong4.jpg","../assets/Wrong/Wrong5.jpg","../assets/Wrong/Wrong6.gif")
 
-const correctMemes = new Array("../assets/Correct/Correct1.jpg")
+const correctMemes = new Array("../assets/Correct/Correct1.jpg","../assets/Correct/Correct2.png","../assets/Correct/Correct3.jpg","../assets/Correct/Correct4.jpg","../assets/Correct/Correct5.jpg","../assets/Correct/Correct6.jpg","../assets/Correct/Correct7.jpg","../assets/Correct/Correct8.PNG","../assets/Correct/Correct9.gif")
 
 const defaultImg = "../assets/glitch-smile.gif"
 
