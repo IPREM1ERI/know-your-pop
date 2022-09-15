@@ -2,7 +2,7 @@ import {randomPop, randomMusic, randomSport, randomMovie, checkAnswer, randomWro
 /*---------------------------let variable----------------------------*/
 let score
 let count
-let timeLeft = 60
+let timeLeft = 30
 /*--------------------------cached elements--------------------------*/
 const boardEl = document.querySelector(".board")
 const questionsSpaceEl = document.getElementById("question-space")
@@ -37,7 +37,7 @@ gameAudio.addEventListener('ended', () => {
 init()
 
 function init() {
-  timeLeft = 60
+  timeLeft = 30
   score = 0
   count = 0
   displayScore.textContent = score
@@ -93,7 +93,6 @@ function renderResult(userInput) {
     correctMeme.src = defaultImg
     wrongMeme.src = randomWrongMeme()
   }
-  
   displayScore.textContent = score
 }
 
