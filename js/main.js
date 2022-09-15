@@ -73,6 +73,7 @@ function renderQuestion(idx) {
 }
 
 function renderResult(userInput) {
+  if (timeLeft === 0) return
   let answer = checkAnswer(userInput)
   if (answer) {
     score += 100
