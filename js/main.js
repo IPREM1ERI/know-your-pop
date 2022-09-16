@@ -46,6 +46,7 @@ function init() {
   answerBox.value = ""
   wrongMeme.src = defaultImg
   correctMeme.src = defaultImg
+  displayScore.style.color = "black"
 }
 
 function handleClick(evt) {
