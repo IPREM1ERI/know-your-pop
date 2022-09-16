@@ -37,7 +37,7 @@ gameAudio.addEventListener('ended', () => {
 init()
 
 function init() {
-  timeLeft = 30
+  timeLeft = 60
   score = 0
   count = 0
   displayScore.textContent = score
